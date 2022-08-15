@@ -72,7 +72,6 @@ class NumberValidator extends Validator {
 		var input:String = Std.string(value);
 		var len:Int = input.length;
 		var isNegative:Bool = false;
-		var i:Int = 0;
 		var c:String;
 		var isNumber:Bool = (value is Float);
 
@@ -92,16 +91,15 @@ class NumberValidator extends Validator {
 
 		// Check for invalid characters in input.
 		var validChars:String = Validator.DECIMAL_DIGITS + "-" + decimalSeparator + thousandsSeparator;
-		for (i in 0...len) {
+		var i = 0;
+		while (i < len) {
 			c = input.charAt(i);
 			if (validChars.indexOf(c) == -1) {
 				results.push(new ValidationResult(true, baseField, "invalidChar", validator.invalidCharError));
 				return results;
 			}
+			i++;
 		}
-		// code below relies on i == len, which is a behavior difference between
-		// AS3 for loops with i++ and Haxe for-in loops
-		i++;
 
 		// Check if the input is negative.
 		if (input.charAt(0) == "-") {
