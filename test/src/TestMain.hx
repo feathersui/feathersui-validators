@@ -8,6 +8,7 @@ class TestMain extends Sprite {
 
 		var runner = new Runner();
 		runner.addCase(new feathers.validators.utils.TestValidatorStringUtil());
+		runner.addCase(new feathers.validators.TestNumberValidator());
 		runner.addCase(new feathers.validators.TestStringValidator());
 
 		#if (html5 && playwright)
