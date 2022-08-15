@@ -30,12 +30,12 @@ class ZipCodeValidator extends Validator {
 	//  Class constants
 	//
 	//--------------------------------------------------------------------------
-	private static final INVALID_CHARS:String = "The ZIP code contains invalid characters.";
-	private static final INVALID_DOMAIN:String = "The domain parameter is invalid. It must be either 'US Only', 'Canada Only', or 'US or Canada'.";
-	private static final INVALID_FORMAT_CHARS:String = "The allowedFormatChars parameter is invalid. Alphanumeric characters are not allowed (a-z A-Z 0-9).";
-	private static final WRONG_CA_FORMAT:String = "The Canadian postal code must be formatted 'A1B 2C3'.";
-	private static final WRONG_US_FORMAT:String = "The ZIP+4 code must be formatted '12345-6789'.";
-	private static final WRONG_LENGTH:String = "The ZIP code must be 5 digits or 5+4 digits.";
+	private static final INVALID_CHARS_ERROR:String = "The ZIP code contains invalid characters.";
+	private static final INVALID_DOMAIN_ERROR:String = "The domain parameter is invalid. It must be either 'US Only', 'Canada Only', or 'US or Canada'.";
+	private static final INVALID_FORMAT_CHARS_ERROR:String = "The allowedFormatChars parameter is invalid. Alphanumeric characters are not allowed (a-z A-Z 0-9).";
+	private static final WRONG_CA_FORMAT_ERROR:String = "The Canadian postal code must be formatted 'A1B 2C3'.";
+	private static final WRONG_US_FORMAT_ERROR:String = "The ZIP+4 code must be formatted '12345-6789'.";
+	private static final WRONG_LENGTH_ERROR:String = "The ZIP code must be 5 digits or 5+4 digits.";
 
 	private static final DOMAIN_US:UInt = 1;
 
@@ -99,7 +99,7 @@ class ZipCodeValidator extends Validator {
 		for (i in 0...n) {
 			c = allowedFormatChars.charAt(i);
 			if (Validator.DECIMAL_DIGITS.indexOf(c) != -1 || Validator.ROMAN_LETTERS.indexOf(c) != -1) {
-				throw new Error(INVALID_FORMAT_CHARS);
+				throw new Error(INVALID_FORMAT_CHARS_ERROR);
 			}
 		}
 
@@ -305,14 +305,14 @@ class ZipCodeValidator extends Validator {
 			for (i in 0...value.length) {
 				var c:String = value.charAt(i);
 				if (Validator.DECIMAL_DIGITS.indexOf(c) != -1 || Validator.ROMAN_LETTERS.indexOf(c) != -1) {
-					throw new Error(INVALID_FORMAT_CHARS);
+					throw new Error(INVALID_FORMAT_CHARS_ERROR);
 				}
 			}
 		}
 
 		allowedFormatCharsOverride = value;
 
-		_allowedFormatChars = value != null ? value : "\\ -";
+		_allowedFormatChars = value != null ? value : " -";
 		return _allowedFormatChars;
 	}
 
@@ -358,7 +358,7 @@ class ZipCodeValidator extends Validator {
 	//----------------------------------
 	//  invalidCharError
 	//----------------------------------
-	private var _invalidCharError:String = INVALID_CHARS;
+	private var _invalidCharError:String = INVALID_CHARS_ERROR;
 
 	private var invalidCharErrorOverride:String;
 
@@ -378,14 +378,14 @@ class ZipCodeValidator extends Validator {
 	private function set_invalidCharError(value:String):String {
 		invalidCharErrorOverride = value;
 
-		_invalidCharError = value != null ? value : INVALID_CHARS;
+		_invalidCharError = value != null ? value : INVALID_CHARS_ERROR;
 		return _invalidCharError;
 	}
 
 	//----------------------------------
 	//  invalidDomainError
 	//----------------------------------
-	private var _invalidDomainError:String = INVALID_DOMAIN;
+	private var _invalidDomainError:String = INVALID_DOMAIN_ERROR;
 
 	private var invalidDomainErrorOverride:String;
 
@@ -405,14 +405,14 @@ class ZipCodeValidator extends Validator {
 	private function set_invalidDomainError(value:String):String {
 		invalidDomainErrorOverride = value;
 
-		_invalidDomainError = value != null ? value : INVALID_DOMAIN;
+		_invalidDomainError = value != null ? value : INVALID_DOMAIN_ERROR;
 		return _invalidDomainError;
 	}
 
 	//----------------------------------
 	//  wrongCAFormatError
 	//----------------------------------
-	private var _wrongCAFormatError:String = WRONG_CA_FORMAT;
+	private var _wrongCAFormatError:String = WRONG_CA_FORMAT_ERROR;
 
 	private var wrongCAFormatErrorOverride:String;
 
@@ -432,14 +432,14 @@ class ZipCodeValidator extends Validator {
 	private function set_wrongCAFormatError(value:String):String {
 		wrongCAFormatErrorOverride = value;
 
-		_wrongCAFormatError = value != null ? value : WRONG_CA_FORMAT;
+		_wrongCAFormatError = value != null ? value : WRONG_CA_FORMAT_ERROR;
 		return _wrongCAFormatError;
 	}
 
 	//----------------------------------
 	//  wrongLengthError
 	//----------------------------------
-	private var _wrongLengthError:String = WRONG_LENGTH;
+	private var _wrongLengthError:String = WRONG_LENGTH_ERROR;
 
 	private var wrongLengthErrorOverride:String;
 
@@ -459,14 +459,14 @@ class ZipCodeValidator extends Validator {
 	private function set_wrongLengthError(value:String):String {
 		wrongLengthErrorOverride = value;
 
-		_wrongLengthError = value != null ? value : WRONG_LENGTH;
+		_wrongLengthError = value != null ? value : WRONG_LENGTH_ERROR;
 		return _wrongLengthError;
 	}
 
 	//----------------------------------
 	//  wrongUSFormatError
 	//----------------------------------
-	private var _wrongUSFormatError:String = WRONG_US_FORMAT;
+	private var _wrongUSFormatError:String = WRONG_US_FORMAT_ERROR;
 
 	private var wrongUSFormatErrorOverride:String;
 
@@ -486,7 +486,7 @@ class ZipCodeValidator extends Validator {
 	private function set_wrongUSFormatError(value:String):String {
 		wrongUSFormatErrorOverride = value;
 
-		_wrongUSFormatError = value != null ? value : WRONG_US_FORMAT;
+		_wrongUSFormatError = value != null ? value : WRONG_US_FORMAT_ERROR;
 		return _wrongUSFormatError;
 	}
 
