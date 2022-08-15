@@ -10,6 +10,7 @@ class TestMain extends Sprite {
 		runner.addCase(new feathers.validators.utils.TestValidatorStringUtil());
 		runner.addCase(new feathers.validators.TestNumberValidator());
 		runner.addCase(new feathers.validators.TestStringValidator());
+		runner.addCase(new feathers.validators.TestZipCodeValidator());
 
 		#if (html5 && playwright)
 		// special case: see below for details
