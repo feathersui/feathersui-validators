@@ -97,7 +97,7 @@ class StringValidator extends Validator {
 	//----------------------------------
 	private var _maxLength:Float = Math.NaN;
 
-	private var maxLengthOverride:Float;
+	private var maxLengthOverride:Float = Math.NaN;
 
 	// [Inspectable(category="General", defaultValue="null")]
 
@@ -125,7 +125,7 @@ class StringValidator extends Validator {
 	//----------------------------------
 	private var _minLength:Float = Math.NaN;
 
-	private var minLengthOverride:Float;
+	private var minLengthOverride:Float = Math.NaN;
 
 	// [Inspectable(category="General", defaultValue="null")]
 
