@@ -116,7 +116,7 @@ class StringValidator extends Validator {
 	private function set_maxLength(value:Float):Float {
 		maxLengthOverride = value;
 
-		_maxLength = !Math.isNaN(value) ? value : Math.NaN;
+		_maxLength = value;
 		return _maxLength;
 	}
 
@@ -144,7 +144,7 @@ class StringValidator extends Validator {
 	private function set_minLength(value:Float):Float {
 		minLengthOverride = value;
 
-		_minLength = !Math.isNaN(value) ? value : Math.NaN;
+		_minLength = value;
 		return _minLength;
 	}
 
