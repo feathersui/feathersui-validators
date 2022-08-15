@@ -1,0 +1,15 @@
+{
+  "name": "feathersui-validators",
+  "url": "https://feathersui.com/",
+  "license": "Apache",
+  "tags": ["openfl", "feathersui", "validators", "validation", "forms"],
+  "description": "Form validation for Feathers UI",
+  "version": "1.0.0-alpha.1",
+  "classPath": "src",
+  "dependencies": {
+    "openfl": "",
+    "feathersui": ""
+  },
+  "contributors": ["bowlerhat"],
+  "releasenote": "Initial release"
+}
