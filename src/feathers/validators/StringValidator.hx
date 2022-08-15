@@ -240,7 +240,7 @@ class StringValidator extends Validator {
 
 		// Return if there are errors
 		// or if the required property is set to false and length is 0.
-		var val:String = value ? Std.string(value) : "";
+		var val:String = value != null ? Std.string(value) : "";
 		if (results.length > 0 || ((val.length == 0) && !required)) {
 			return results;
 		} else {
