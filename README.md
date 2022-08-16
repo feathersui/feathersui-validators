@@ -1,4 +1,4 @@
-# Validators Services for Feathers UI
+# Validators for Feathers UI
 
 A port of the form validation classes from [Apache Flex](https://flex.apache.org/) (formerly Adobe Flex) to [Feathers UI](https://feathersui.com/) for [Haxe](https://haxe.org/) and [OpenFL](https://openfl.org/).
 
