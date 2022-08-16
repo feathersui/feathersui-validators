@@ -11,6 +11,7 @@ class TestMain extends Sprite {
 		runner.addCase(new feathers.validators.TestEmailValidator());
 		runner.addCase(new feathers.validators.TestNumberValidator());
 		runner.addCase(new feathers.validators.TestPhoneNumberValidator());
+		runner.addCase(new feathers.validators.TestRegExpValidator());
 		runner.addCase(new feathers.validators.TestSocialSecurityValidator());
 		runner.addCase(new feathers.validators.TestStringValidator());
 		runner.addCase(new feathers.validators.TestZipCodeValidator());
