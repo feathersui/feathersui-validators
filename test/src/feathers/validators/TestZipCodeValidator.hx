@@ -1,6 +1,7 @@
 package feathers.validators;
 
 import feathers.events.ValidationResultEvent;
+import openfl.errors.Error;
 import utest.Assert;
 import utest.Test;
 
@@ -233,5 +234,11 @@ class TestZipCodeValidator extends Test {
 		Assert.notNull(event);
 		Assert.equals(ValidationResultEvent.VALID, event.type);
 		Assert.isNull(event.results);
+	}
+
+	public function testAllowFormatCharsInvalidThrows():Void {
+		Assert.raises(() -> {
+			_validator.allowedFormatChars = "2";
+		}, Error);
 	}
 }
