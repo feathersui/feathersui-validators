@@ -45,9 +45,9 @@ class SocialSecurityValidator extends Validator {
 		@param value A field to validate.
 
 		@param baseField Text representation of the subfield
-		specified in the <code>value</code> parameter.
-		For example, if the <code>value</code> parameter specifies
-		value.social, the <code>baseField</code> value is <code>social</code>.
+		specified in the `value` parameter.
+		For example, if the `value` parameter specifies
+		value.social, the `baseField` value is `social`.
 
 		@return An Array of ValidationResult objects, with one ValidationResult
 		object for each field examined by the validator.
@@ -175,7 +175,7 @@ class SocialSecurityValidator extends Validator {
 	/**
 		Error message when the value contains characters
 		other than digits and formatting characters
-		defined by the <code>allowedFormatChars</code> property.
+		defined by the `allowedFormatChars` property.
 
 		@default "You entered invalid characters in your Social Security number."
 	**/
@@ -263,12 +263,12 @@ class SocialSecurityValidator extends Validator {
 	}
 
 	/**
-		Override of the base class <code>doValidation()</code> method
+		Override of the base class `doValidation()` method
 		to validate a Social Security number.
 
-		<p>You do not call this method directly;
+		You do not call this method directly;
 		Flex calls it as part of performing a validation.
-		If you create a custom Validator class, you must implement this method.</p>
+		If you create a custom Validator class, you must implement this method.
 
 		@param value Object to validate.
 
@@ -279,7 +279,7 @@ class SocialSecurityValidator extends Validator {
 		var results = super.doValidation(value);
 
 		// Return if there are errors
-		// or if the required property is set to <code>false</code> and length is 0.
+		// or if the required property is set to `false` and length is 0.
 		var val:String = value != null ? Std.string(value) : "";
 		if (results.length > 0 || ((val.length == 0) && !required)) {
 			return results;
