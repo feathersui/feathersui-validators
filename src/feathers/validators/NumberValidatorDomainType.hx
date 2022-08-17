@@ -23,7 +23,7 @@ package feathers.validators;
 
 	@see `mx.validators.NumberValidator`
 **/
-class NumberValidatorDomainType {
+final class NumberValidatorDomainType {
 	//--------------------------------------------------------------------------
 	//
 	//  Class constants

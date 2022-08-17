@@ -91,7 +91,6 @@ class ZipCodeValidator extends Validator {
 		}
 
 		var n:Int;
-		var i:Int;
 		var c:String;
 
 		// Make sure localAllowedFormatChars contains no numbers or letters.
@@ -327,10 +326,8 @@ class ZipCodeValidator extends Validator {
 
 	/** 
 		Type of ZIP code to check.
-		In MXML, valid values are `"US or Canada"`, 
-		`"US Only"` and `"Canada Only"`.
 
-		In ActionScript, you can use the following constants to set this property: 
+		In Haxe, you can use the following constants to set this property: 
 		`ZipCodeValidatorDomainType.US_ONLY`, 
 		`ZipCodeValidatorDomainType.US_OR_CANADA`, or
 		`ZipCodeValidatorDomainType.CANADA_ONLY`.

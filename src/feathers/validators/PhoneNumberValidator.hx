@@ -144,7 +144,7 @@ class PhoneNumberValidator extends Validator {
 
 	/** 
 		Minimum number of digits for a valid phone number.
-		A value of NaN means this property is ignored.
+		A value of `Math.NaN` means this property is ignored.
 
 		@default 10
 	**/

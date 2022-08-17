@@ -726,7 +726,6 @@ class Validator extends EventDispatcher implements IValidator {
 				// Now we need to send valid results
 				// for every subfield that didn't fail.
 				var n:Int;
-				var i:Int;
 
 				n = errorResults.length;
 				for (i in 0...n) {

@@ -333,7 +333,7 @@ class NumberValidator extends Validator {
 		Type of number to be validated.
 		Permitted values are `"real"` and `"int"`.
 
-		In ActionScript, you can use the following constants to set this property: 
+		In Haxe, you can use the following constants to set this property: 
 		`NumberValidatorDomainType.REAL` or
 		`NumberValidatorDomainType.INT`.
 
@@ -362,9 +362,9 @@ class NumberValidator extends Validator {
 	// [Inspectable(category="General", defaultValue="null")]
 
 	/**
-		Maximum value for a valid number. A value of NaN means there is no maximum.
+		Maximum value for a valid number. A value of `Math.NaN` means there is no maximum.
 
-		@default NaN
+		@default Math.NaN
 	**/
 	public var maxValue(get, set):Float;
 
@@ -389,9 +389,9 @@ class NumberValidator extends Validator {
 	// [Inspectable(category="General", defaultValue="null")]
 
 	/**
-		Minimum value for a valid number. A value of NaN means there is no minimum.
+		Minimum value for a valid number. A value of `Math.NaN` means there is no minimum.
 
-		@default NaN
+		@default Math.NaN
 	**/
 	public var minValue(get, set):Float;
 

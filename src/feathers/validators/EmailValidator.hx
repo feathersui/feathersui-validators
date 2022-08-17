@@ -188,7 +188,6 @@ class EmailValidator extends Validator {
 		var newpos:Int = 0;
 		var item:Float;
 		var n:Int;
-		var i:Int;
 
 		// if you have :, you're in IPv6 mode
 		// if you have ., you're in IPv4 mode

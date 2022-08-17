@@ -341,12 +341,9 @@ class CurrencyValidator extends Validator {
 	/**
 		Specifies the alignment of the `currencySymbol`
 		relative to the rest of the expression.
-		Acceptable values in ActionScript are `CurrencyValidatorAlignSymbol.LEFT`, 
+		Acceptable values in Haxe are `CurrencyValidatorAlignSymbol.LEFT`, 
 		`CurrencyValidatorAlignSymbol.RIGHT`, and 
 		`CurrencyValidatorAlignSymbol.ANY`.
-		Acceptable values in MXML are `"left"`, 
-		`"right"`, and 
-		`"any"`.
 		 
 		@default CurrencyValidatorAlignSymbol.LEFT
 
@@ -464,9 +461,9 @@ class CurrencyValidator extends Validator {
 
 	/**
 		Maximum value for a valid number.
-		A value of NaN means it is ignored.
+		A value of `Math.NaN` means it is ignored.
 
-		@default NaN
+		@default Math.NaN
 	**/
 	public var maxValue(get, set):Float;
 
@@ -492,9 +489,9 @@ class CurrencyValidator extends Validator {
 
 	/**
 		Minimum value for a valid number.
-		A value of NaN means it is ignored.
+		A value of `Math.NaN` means it is ignored.
 
-		@default NaN
+		@default Math.NaN
 	**/
 	public var minValue(get, set):Float;
 

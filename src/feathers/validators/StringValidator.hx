@@ -102,7 +102,7 @@ class StringValidator extends Validator {
 	// [Inspectable(category="General", defaultValue="null")]
 
 	/** 
-		Maximum length for a valid String. A value of NaN means this property is
+		Maximum length for a valid String. A value of `Math.NaN` means this property is
 		ignored.
 
 		@default Math.NaN
@@ -130,7 +130,7 @@ class StringValidator extends Validator {
 	// [Inspectable(category="General", defaultValue="null")]
 
 	/** 
-		Minimum length for a valid String. A value of NaN means this property is
+		Minimum length for a valid String. A value of `Math.NaN` means this property is
 		ignored.
 
 		@default Math.NaN
