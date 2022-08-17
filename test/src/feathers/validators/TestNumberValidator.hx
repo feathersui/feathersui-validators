@@ -409,7 +409,7 @@ class TestNumberValidator extends Test {
 		Assert.isNull(event.results);
 	}
 
-	public function testPrecisionInvalidFewerDigits():Void {
+	public function testPrecisionValidFewerDigits():Void {
 		_validator.precision = 2;
 		var event = _validator.validate("1.2");
 		Assert.notNull(event);
