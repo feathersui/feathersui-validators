@@ -125,7 +125,7 @@ class SocialSecurityValidator extends Validator {
 	//----------------------------------
 	//  allowedFormatChars
 	//----------------------------------
-	private var _allowedFormatChars:String = " -";
+	private var _allowedFormatChars:String;
 
 	private var allowedFormatCharsOverride:String;
 
@@ -166,7 +166,7 @@ class SocialSecurityValidator extends Validator {
 	//----------------------------------
 	//  invalidCharError
 	//----------------------------------
-	private var _invalidCharError:String = INVALID_CHAR_ERROR;
+	private var _invalidCharError:String;
 
 	private var invalidCharErrorOverride:String;
 
@@ -195,7 +195,7 @@ class SocialSecurityValidator extends Validator {
 	//----------------------------------
 	//  wrongFormatError
 	//----------------------------------
-	private var _wrongFormatError:String = WRONG_FORMAT_ERROR;
+	private var _wrongFormatError:String;
 
 	private var wrongFormatErrorOverride:String;
 
@@ -222,7 +222,7 @@ class SocialSecurityValidator extends Validator {
 	//----------------------------------
 	//  zeroStartError
 	//----------------------------------
-	private var _zeroStartError:String = ZERO_START_ERROR;
+	private var _zeroStartError:String;
 
 	private var zeroStartErrorOverride:String;
 

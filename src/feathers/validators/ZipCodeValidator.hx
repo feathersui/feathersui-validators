@@ -281,7 +281,7 @@ class ZipCodeValidator extends Validator {
 	//----------------------------------
 	//  allowedFormatChars
 	//----------------------------------
-	private var _allowedFormatChars:String = " -";
+	private var _allowedFormatChars:String;
 
 	private var allowedFormatCharsOverride:String;
 
@@ -355,7 +355,7 @@ class ZipCodeValidator extends Validator {
 	//----------------------------------
 	//  invalidCharError
 	//----------------------------------
-	private var _invalidCharError:String = INVALID_CHARS_ERROR;
+	private var _invalidCharError:String;
 
 	private var invalidCharErrorOverride:String;
 
@@ -382,7 +382,7 @@ class ZipCodeValidator extends Validator {
 	//----------------------------------
 	//  invalidDomainError
 	//----------------------------------
-	private var _invalidDomainError:String = INVALID_DOMAIN_ERROR;
+	private var _invalidDomainError:String;
 
 	private var invalidDomainErrorOverride:String;
 
@@ -409,7 +409,7 @@ class ZipCodeValidator extends Validator {
 	//----------------------------------
 	//  wrongCAFormatError
 	//----------------------------------
-	private var _wrongCAFormatError:String = WRONG_CA_FORMAT_ERROR;
+	private var _wrongCAFormatError:String;
 
 	private var wrongCAFormatErrorOverride:String;
 
@@ -436,7 +436,7 @@ class ZipCodeValidator extends Validator {
 	//----------------------------------
 	//  wrongLengthError
 	//----------------------------------
-	private var _wrongLengthError:String = WRONG_LENGTH_ERROR;
+	private var _wrongLengthError:String;
 
 	private var wrongLengthErrorOverride:String;
 
@@ -463,7 +463,7 @@ class ZipCodeValidator extends Validator {
 	//----------------------------------
 	//  wrongUSFormatError
 	//----------------------------------
-	private var _wrongUSFormatError:String = WRONG_US_FORMAT_ERROR;
+	private var _wrongUSFormatError:String;
 
 	private var wrongUSFormatErrorOverride:String;
 

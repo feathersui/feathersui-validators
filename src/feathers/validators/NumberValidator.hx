@@ -440,7 +440,7 @@ class NumberValidator extends Validator {
 	//----------------------------------
 	//  thousandsSeparator
 	//----------------------------------
-	private var _thousandsSeparator:String = ",";
+	private var _thousandsSeparator:String;
 
 	private var thousandsSeparatorOverride:String;
 
@@ -475,7 +475,7 @@ class NumberValidator extends Validator {
 	//----------------------------------
 	//  decimalPointCountError
 	//----------------------------------
-	private var _decimalPointCountError:String = DECIMAL_POINT_COUNT_ERROR;
+	private var _decimalPointCountError:String;
 
 	private var decimalPointCountErrorOverride:String;
 
@@ -502,7 +502,7 @@ class NumberValidator extends Validator {
 	//----------------------------------
 	//  exceedsMaxError
 	//----------------------------------
-	private var _exceedsMaxError:String = EXCEEDS_MAX_ERROR;
+	private var _exceedsMaxError:String;
 
 	private var exceedsMaxErrorOverride:String;
 
@@ -529,7 +529,7 @@ class NumberValidator extends Validator {
 	//----------------------------------
 	//  integerError
 	//----------------------------------
-	private var _integerError:String = INTEGER_ERROR;
+	private var _integerError:String;
 
 	private var integerErrorOverride:String;
 
@@ -557,7 +557,7 @@ class NumberValidator extends Validator {
 	//----------------------------------
 	//  invalidCharError
 	//----------------------------------
-	private var _invalidCharError:String = INVALID_CHAR_ERROR;
+	private var _invalidCharError:String;
 
 	private var invalidCharErrorOverride:String;
 
@@ -584,7 +584,7 @@ class NumberValidator extends Validator {
 	//----------------------------------
 	//  invalidFormatCharsError
 	//----------------------------------
-	private var _invalidFormatCharsError:String = INVALID_FORMAT_CHARS_ERROR;
+	private var _invalidFormatCharsError:String;
 
 	private var invalidFormatCharsErrorOverride:String;
 
@@ -613,7 +613,7 @@ class NumberValidator extends Validator {
 	//----------------------------------
 	//  lowerThanMinError
 	//----------------------------------
-	private var _lowerThanMinError:String = LOWER_THAN_MIN_ERROR;
+	private var _lowerThanMinError:String;
 
 	private var lowerThanMinErrorOverride:String;
 
@@ -640,7 +640,7 @@ class NumberValidator extends Validator {
 	//----------------------------------
 	//  negativeError
 	//----------------------------------
-	private var _negativeError:String = NEGATIVE_ERROR;
+	private var _negativeError:String;
 
 	private var negativeErrorOverride:String;
 
@@ -668,7 +668,7 @@ class NumberValidator extends Validator {
 	//----------------------------------
 	//  precisionError
 	//----------------------------------
-	private var _precisionError:String = PRECISION_ERROR;
+	private var _precisionError:String;
 
 	private var precisionErrorOverride:String;
 
@@ -696,7 +696,7 @@ class NumberValidator extends Validator {
 	//----------------------------------
 	//  separationError
 	//----------------------------------
-	private var _separationError:String = SEPARATION_ERROR;
+	private var _separationError:String;
 
 	private var separationErrorOverride:String;
 

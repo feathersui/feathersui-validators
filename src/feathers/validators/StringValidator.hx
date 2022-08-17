@@ -156,7 +156,7 @@ class StringValidator extends Validator {
 	//----------------------------------
 	//  tooLongError
 	//----------------------------------
-	private var _tooLongError:String = TOO_LONG_ERROR;
+	private var _tooLongError:String;
 
 	private var tooLongErrorOverride:String;
 

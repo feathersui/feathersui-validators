@@ -393,7 +393,7 @@ class CurrencyValidator extends Validator {
 	//----------------------------------
 	//  currencySymbol
 	//----------------------------------
-	private var _currencySymbol:String = "$";
+	private var _currencySymbol:String;
 
 	private var currencySymbolOverride:String;
 
@@ -509,7 +509,7 @@ class CurrencyValidator extends Validator {
 	//----------------------------------
 	//  precision
 	//----------------------------------
-	private var _precision:Int = 2;
+	private var _precision:Int;
 
 	private var precisionOverride:Int = 2;
 
@@ -575,7 +575,7 @@ class CurrencyValidator extends Validator {
 	//----------------------------------
 	//  currencySymbolError
 	//----------------------------------
-	private var _currencySymbolError:String = CURRENCY_SYMBOL_ERROR;
+	private var _currencySymbolError:String;
 
 	private var currencySymbolErrorOverride:String;
 
@@ -603,7 +603,7 @@ class CurrencyValidator extends Validator {
 	//----------------------------------
 	//  decimalPointCountError
 	//----------------------------------
-	private var _decimalPointCountError:String = DECIMAL_POINT_COUNT_ERROR;
+	private var _decimalPointCountError:String;
 
 	private var decimalPointCountErrorOverride:String;
 
@@ -630,7 +630,7 @@ class CurrencyValidator extends Validator {
 	//----------------------------------
 	//  exceedsMaxError
 	//----------------------------------
-	private var _exceedsMaxError:String = EXCEEDS_MAX_ERROR;
+	private var _exceedsMaxError:String;
 
 	private var exceedsMaxErrorOverride:String;
 
@@ -657,7 +657,7 @@ class CurrencyValidator extends Validator {
 	//----------------------------------
 	//  invalidCharError
 	//----------------------------------
-	private var _invalidCharError:String = INVALID_CHAR_ERROR;
+	private var _invalidCharError:String;
 
 	private var invalidCharErrorOverride:String;
 
@@ -684,7 +684,7 @@ class CurrencyValidator extends Validator {
 	//----------------------------------
 	//  invalidFormatCharsError
 	//----------------------------------
-	private var _invalidFormatCharsError:String = INVALID_FORMAT_CHARS_ERROR;
+	private var _invalidFormatCharsError:String;
 
 	private var invalidFormatCharsErrorOverride:String;
 
@@ -711,7 +711,7 @@ class CurrencyValidator extends Validator {
 	//----------------------------------
 	//  lowerThanMinError
 	//----------------------------------
-	private var _lowerThanMinError:String = LOWER_THAN_MIN_ERROR;
+	private var _lowerThanMinError:String;
 
 	private var lowerThanMinErrorOverride:String;
 
@@ -738,7 +738,7 @@ class CurrencyValidator extends Validator {
 	//----------------------------------
 	//  negativeError
 	//----------------------------------
-	private var _negativeError:String = NEGATIVE_ERROR;
+	private var _negativeError:String;
 
 	private var negativeErrorOverride:String;
 
@@ -795,7 +795,7 @@ class CurrencyValidator extends Validator {
 	//----------------------------------
 	//  separationError
 	//----------------------------------
-	private var _separationError:String = SEPARATION_ERROR;
+	private var _separationError:String;
 
 	private var separationErrorOverride:String;
 

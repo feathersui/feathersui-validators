@@ -352,7 +352,7 @@ class CreditCardValidator extends Validator {
 	//----------------------------------
 	//  allowedFormatChars
 	//----------------------------------
-	private var _allowedFormatChars:String = " -";
+	private var _allowedFormatChars:String;
 
 	private var allowedFormatCharsOverride:String;
 
@@ -570,7 +570,7 @@ class CreditCardValidator extends Validator {
 	//----------------------------------
 	//  invalidCharError
 	//----------------------------------
-	private var _invalidCharError:String = INVALID_CHAR_ERROR;
+	private var _invalidCharError:String;
 
 	private var invalidCharErrorOverride:String;
 
@@ -597,7 +597,7 @@ class CreditCardValidator extends Validator {
 	//----------------------------------
 	//  invalidNumberError
 	//----------------------------------
-	private var _invalidNumberError:String = INVALID_NUMBER_ERROR;
+	private var _invalidNumberError:String;
 
 	private var invalidNumberErrorOverride:String;
 
@@ -624,7 +624,7 @@ class CreditCardValidator extends Validator {
 	//----------------------------------
 	//  noNumError
 	//----------------------------------
-	private var _noNumError:String = NO_NUMBER_ERROR;
+	private var _noNumError:String;
 
 	private var noNumErrorOverride:String;
 
@@ -651,7 +651,7 @@ class CreditCardValidator extends Validator {
 	//----------------------------------
 	//  noTypeError
 	//----------------------------------
-	private var _noTypeError:String = NO_TYPE_ERROR;
+	private var _noTypeError:String;
 
 	private var noTypeErrorOverride:String;
 
@@ -678,7 +678,7 @@ class CreditCardValidator extends Validator {
 	//----------------------------------
 	//  wrongLengthError
 	//----------------------------------
-	private var _wrongLengthError:String = WRONG_LENGTH_ERROR;
+	private var _wrongLengthError:String;
 
 	private var wrongLengthErrorOverride:String;
 
@@ -706,7 +706,7 @@ class CreditCardValidator extends Validator {
 	//----------------------------------
 	//  wrongTypeError
 	//----------------------------------
-	private var _wrongTypeError:String = WRONG_TYPE_ERROR;
+	private var _wrongTypeError:String;
 
 	private var wrongTypeErrorOverride:String;
 

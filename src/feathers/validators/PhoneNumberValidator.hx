@@ -100,7 +100,7 @@ class PhoneNumberValidator extends Validator {
 	//----------------------------------
 	//  allowedFormatChars
 	//----------------------------------
-	private var _allowedFormatChars:String = "-()+ .";
+	private var _allowedFormatChars:String;
 
 	private var allowedFormatCharsOverride:String;
 
@@ -136,7 +136,7 @@ class PhoneNumberValidator extends Validator {
 	//----------------------------------
 	//  minDigits
 	//----------------------------------
-	private var _minDigits:Float = 10;
+	private var _minDigits:Float;
 
 	private var minDigitsOverride:Float = 10;
 
@@ -169,7 +169,7 @@ class PhoneNumberValidator extends Validator {
 	//----------------------------------
 	//  invalidCharError
 	//----------------------------------
-	private var _invalidCharError:String = INVALID_CHAR_ERROR;
+	private var _invalidCharError:String;
 
 	private var invalidCharErrorOverride:String;
 
@@ -196,7 +196,7 @@ class PhoneNumberValidator extends Validator {
 	//----------------------------------
 	//  wrongLengthError
 	//----------------------------------
-	private var _wrongLengthError:String = WRONG_LENGTH_ERROR;
+	private var _wrongLengthError:String;
 
 	private var wrongLengthErrorOverride:String;
 

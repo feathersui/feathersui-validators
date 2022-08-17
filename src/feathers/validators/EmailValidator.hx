@@ -313,7 +313,7 @@ class EmailValidator extends Validator {
 	//----------------------------------
 	//  invalidCharError
 	//----------------------------------
-	private var _invalidCharError:String = INVALID_CHAR_ERROR;
+	private var _invalidCharError:String;
 
 	private var invalidCharErrorOverride:String;
 
@@ -340,7 +340,7 @@ class EmailValidator extends Validator {
 	//----------------------------------
 	//  invalidDomainError
 	//----------------------------------
-	private var _invalidDomainError:String = INVALID_DOMAIN_ERROR;
+	private var _invalidDomainError:String;
 
 	private var invalidDomainErrorOverride:String;
 
@@ -368,7 +368,7 @@ class EmailValidator extends Validator {
 	//----------------------------------
 	//  invalidIPDomainError
 	//----------------------------------
-	private var _invalidIPDomainError:String = INVALID_IP_DOMAIN_ERROR;
+	private var _invalidIPDomainError:String;
 
 	private var invalidIPDomainErrorOverride:String;
 
@@ -395,7 +395,7 @@ class EmailValidator extends Validator {
 	//----------------------------------
 	//  invalidPeriodsInDomainError
 	//----------------------------------
-	private var _invalidPeriodsInDomainError:String = INVALID_PERIODS_IN_DOMAIN_ERROR;
+	private var _invalidPeriodsInDomainError:String;
 
 	private var invalidPeriodsInDomainErrorOverride:String;
 
@@ -422,7 +422,7 @@ class EmailValidator extends Validator {
 	//----------------------------------
 	//  missingAtSignError
 	//----------------------------------
-	private var _missingAtSignError:String = MISSING_AT_SIGN_ERROR;
+	private var _missingAtSignError:String;
 
 	private var missingAtSignErrorOverride:String;
 
@@ -449,7 +449,7 @@ class EmailValidator extends Validator {
 	//----------------------------------
 	//  missingPeriodInDomainError
 	//----------------------------------
-	private var _missingPeriodInDomainError:String = MISSING_PERIOD_IN_DOMAIN_ERROR;
+	private var _missingPeriodInDomainError:String;
 
 	private var missingPeriodInDomainErrorOverride:String;
 
@@ -476,7 +476,7 @@ class EmailValidator extends Validator {
 	//----------------------------------
 	//  missingUsernameError
 	//----------------------------------
-	private var _missingUsernameError:String = MISSING_USERNAME_ERROR;
+	private var _missingUsernameError:String;
 
 	private var missingUsernameErrorOverride:String;
 
@@ -503,7 +503,7 @@ class EmailValidator extends Validator {
 	//----------------------------------
 	//  tooManyAtSignsError
 	//----------------------------------
-	private var _tooManyAtSignsError:String = TOO_MANY_AT_SIGNS_ERROR;
+	private var _tooManyAtSignsError:String;
 
 	private var tooManyAtSignsErrorOverride:String;
 

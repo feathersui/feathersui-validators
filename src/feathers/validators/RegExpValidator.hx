@@ -145,7 +145,7 @@ class RegExpValidator extends Validator {
 	//----------------------------------
 	//  noExpressionError
 	//----------------------------------
-	private var _noExpressionError:String = NO_EXPRESSION_ERROR;
+	private var _noExpressionError:String;
 
 	private var noExpressionErrorOverride:String;
 
@@ -171,7 +171,7 @@ class RegExpValidator extends Validator {
 	//----------------------------------
 	//  noMatchError
 	//----------------------------------
-	private var _noMatchError:String = NO_MATCH_ERROR;
+	private var _noMatchError:String;
 
 	private var noMatchErrorOverride:String;
 

@@ -469,7 +469,7 @@ class DateValidator extends Validator {
 	//----------------------------------
 	//  allowedFormatChars
 	//----------------------------------
-	private var _allowedFormatChars:String = "/- \\.";
+	private var _allowedFormatChars:String;
 
 	private var allowedFormatCharsOverride:String;
 
@@ -611,7 +611,7 @@ class DateValidator extends Validator {
 	//----------------------------------
 	//  inputFormat
 	//----------------------------------
-	private var _inputFormat:String = "MM/DD/YYYY";
+	private var _inputFormat:String;
 
 	private var inputFormatOverride:String;
 
@@ -837,7 +837,7 @@ class DateValidator extends Validator {
 	//----------------------------------
 	//  formatError
 	//----------------------------------
-	private var _formatError:String = FORMAT_ERROR;
+	private var _formatError:String;
 
 	private var formatErrorOverride:String;
 
@@ -865,7 +865,7 @@ class DateValidator extends Validator {
 	//----------------------------------
 	//  invalidCharError
 	//----------------------------------
-	private var _invalidCharError:String = INVALID_CHAR_ERROR;
+	private var _invalidCharError:String;
 
 	private var invalidCharErrorOverride:String;
 
@@ -892,7 +892,7 @@ class DateValidator extends Validator {
 	//----------------------------------
 	//  wrongDayError
 	//----------------------------------
-	private var _wrongDayError:String = WRONG_DAY_ERROR;
+	private var _wrongDayError:String;
 
 	private var wrongDayErrorOverride:String;
 
@@ -919,7 +919,7 @@ class DateValidator extends Validator {
 	//----------------------------------
 	//  wrongLengthError
 	//----------------------------------
-	private var _wrongLengthError:String = WRONG_LENGTH_ERROR;
+	private var _wrongLengthError:String;
 
 	private var wrongLengthErrorOverride:String;
 
@@ -947,7 +947,7 @@ class DateValidator extends Validator {
 	//----------------------------------
 	//  wrongMonthError
 	//----------------------------------
-	private var _wrongMonthError:String = WRONG_MONTH_ERROR;
+	private var _wrongMonthError:String;
 
 	private var wrongMonthErrorOverride:String;
 
@@ -974,7 +974,7 @@ class DateValidator extends Validator {
 	//----------------------------------
 	//  wrongYearError
 	//----------------------------------
-	private var _wrongYearError:String = WRONG_YEAR_ERROR;
+	private var _wrongYearError:String;
 
 	private var wrongYearErrorOverride:String;
 
