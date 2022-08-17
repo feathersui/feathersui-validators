@@ -29,7 +29,7 @@ class TestNumberValidator extends Test {
 		Assert.equals("", result.subField);
 	}
 
-	public function testEqualsMinLength():Void {
+	public function testEqualsMinValue():Void {
 		_validator.minValue = 29;
 		var event = _validator.validate(29);
 		Assert.notNull(event);
