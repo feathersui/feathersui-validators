@@ -107,7 +107,7 @@ class NumberValidator extends Validator {
 			{
 				results.push(new ValidationResult(true, baseField, "invalidChar", validator.invalidCharError));
 				return results;
-			} else if (len == 2 && input.charAt(1) == '.') // handle "-."
+			} else if (len == 2 && input.charAt(1) == decimalSeparator) // handle "-."
 			{
 				results.push(new ValidationResult(true, baseField, "invalidChar", validator.invalidCharError));
 				return results;
