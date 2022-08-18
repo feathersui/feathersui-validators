@@ -524,13 +524,13 @@ class Validator extends EventDispatcher implements IValidator {
 	}
 
 	private function addTriggerHandler():Void {
-		if (actualTrigger != null) {
+		if (actualTrigger != null && _triggerEvent != null) {
 			actualTrigger.addEventListener(_triggerEvent, triggerHandler);
 		}
 	}
 
 	private function removeTriggerHandler():Void {
-		if (actualTrigger != null) {
+		if (actualTrigger != null && _triggerEvent != null) {
 			actualTrigger.removeEventListener(_triggerEvent, triggerHandler);
 		}
 	}
