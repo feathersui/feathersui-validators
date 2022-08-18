@@ -114,7 +114,11 @@ class Validator extends EventDispatcher implements IValidator {
 		var result:Dynamic = obj;
 		var i:Int = -1;
 		while (++i < path.length && result != null) {
-			result = Reflect.getProperty(result, path[i]);
+			try {
+				result = Reflect.getProperty(result, path[i]);
+			} catch (e:Dynamic) {
+				return null;
+			}
 			if (result == null) {
 				return null;
 			}
@@ -651,7 +655,14 @@ class Validator extends EventDispatcher implements IValidator {
 		if (_valueFunction != null) {
 			return _valueFunction();
 		} else if (_source != null && (_property != null && _property.length > 0)) {
-			return _property.indexOf(".") == -1 ? Reflect.getProperty(_source, _property) : getValue(_source, _property.split("."));
+			if (_property.indexOf(".") == -1) {
+				try {
+					return Reflect.getProperty(_source, _property);
+				} catch (e:Dynamic) {
+					return null;
+				}
+			}
+			return getValue(_source, _property.split("."));
 		} else if (_source == null && (_property != null && _property.length > 0)) {
 			var message = "The source attribute must be specified when the property attribute is specified.";
 			throw new Error(message);
