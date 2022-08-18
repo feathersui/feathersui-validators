@@ -7,7 +7,6 @@
 	<source path="src" />
 	
 	<haxelib name="openfl" />
-	<haxelib name="actuate" />
 
 	<haxeflag name="--macro" value="include('feathers.validators')"/>
 
