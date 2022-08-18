@@ -355,12 +355,13 @@ class Validator extends EventDispatcher implements IValidator {
 		for specifying nested properties. 
 
 		If you specify a value to the `source` property,
-		then you should specify a value to the `property`
-		property as well. 
+		then you should specify a value to either the `property`
+		property or the `valueFunction` property as well. 
 		The `source` property is optional.
 
 		@default null
 
+		@see `property`
 		@see `valueFunction`
 	**/
 	public var source(get, set):Dynamic;
