@@ -32,7 +32,7 @@ package feathers.validators;
 	of the ValidationResult class, and contains additional properties 
 	used with regular expressions.
 
-	@see `mx.events.ValidationResultEvent`
+	@see `feathers.events.ValidationResultEvent`
 **/
 class RegExpValidationResult extends ValidationResult {
 	//--------------------------------------------------------------------------

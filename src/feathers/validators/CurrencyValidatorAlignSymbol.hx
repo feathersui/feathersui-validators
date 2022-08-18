@@ -23,7 +23,7 @@ package feathers.validators;
 	These values are used in the `CurrencyValidator.alignSymbol`
 	property.
 
-	@see `mx.validators.CurrencyValidator`
+	@see `feathers.validators.CurrencyValidator`
 **/
 final class CurrencyValidatorAlignSymbol {
 	//--------------------------------------------------------------------------

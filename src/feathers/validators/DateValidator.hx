@@ -83,7 +83,7 @@ class DateValidator extends Validator {
 		@return An Array of ValidationResult objects, with one ValidationResult 
 		object for each field examined by the validator. 
 
-		@see `mx.validators.ValidationResult`
+		@see `feathers.validators.ValidationResult`
 	**/
 	public static function validateDate(validator:DateValidator, value:Dynamic, baseField:String):Array<ValidationResult> {
 		var results:Array<ValidationResult> = [];

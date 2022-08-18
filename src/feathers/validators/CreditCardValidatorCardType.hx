@@ -23,7 +23,7 @@ package feathers.validators;
 	These values are used in the `CreditCardValidator.cardType`
 	property.
 
-	@see `mx.validators.CreditCardValidator`
+	@see `feathers.validators.CreditCardValidator`
 **/
 final class CreditCardValidatorCardType {
 	//--------------------------------------------------------------------------

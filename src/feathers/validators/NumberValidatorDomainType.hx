@@ -21,7 +21,7 @@ package feathers.validators;
 	The NumberValidatorDomainType class defines the values 
 	for the `domain` property of the NumberValidator class.
 
-	@see `mx.validators.NumberValidator`
+	@see `feathers.validators.NumberValidator`
 **/
 final class NumberValidatorDomainType {
 	//--------------------------------------------------------------------------

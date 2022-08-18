@@ -31,7 +31,7 @@ import feathers.events.ValidationResultEvent;
 	this interface type to call the validate() method on 
 	multiple validator objects.
 
-	@see `mx.validators.Validator`
+	@see `feathers.validators.Validator`
 **/
 interface IValidator {
 	//----------------------------------------------------------------------
@@ -89,8 +89,8 @@ interface IValidator {
 		Examine the `ValidationResult.isError`
 		property to determine if the field passed or failed the validation. 
 
-		@see `mx.events.ValidationResultEvent`
-		@see `mx.validators.ValidationResult`
+		@see `feathers.events.ValidationResultEvent`
+		@see `feathers.validators.ValidationResult`
 	**/
 	function validate(value:Dynamic = null, suppressEvents:Bool = false):ValidationResultEvent;
 }

@@ -52,8 +52,8 @@ import feathers.events.ValidationResultEvent;
 	   this Array is of length 0.  Use matchedSubStrings[0] to access the 
 	   first substring match.
 
-	@see `mx.validators.RegExpValidationResult`
-	@see `mx.validators.ValidationResult`
+	@see `feathers.validators.RegExpValidationResult`
+	@see `feathers.validators.ValidationResult`
 	@see `EReg`
 **/
 class RegExpValidator extends Validator {

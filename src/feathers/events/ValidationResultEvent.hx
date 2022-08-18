@@ -158,7 +158,7 @@ class ValidationResultEvent extends Event {
 	/**
 		An array of ValidationResult objects, one per validated field. 
 
-		@see `mx.validators.ValidationResult`
+		@see `feathers.validators.ValidationResult`
 	**/
 	public var results:Array<ValidationResult>;
 

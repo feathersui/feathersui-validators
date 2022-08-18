@@ -89,7 +89,7 @@ interface IValidatorListener {
 
 		@param event The event object for the validation.
 
-		@see `mx.events.ValidationResultEvent`
+		@see `feathers.events.ValidationResultEvent`
 	**/
 	function validationResultHandler(event:ValidationResultEvent):Void;
 }

@@ -22,7 +22,7 @@ package feathers.validators;
 	for the `domain` property of the ZipCodeValidator class,
 	which you use to specify the type of ZIP code to validate.
 
-	@see `mx.validators.ZipCodeValidator`
+	@see `feathers.validators.ZipCodeValidator`
 **/
 final class ZipCodeValidatorDomainType {
 	//--------------------------------------------------------------------------

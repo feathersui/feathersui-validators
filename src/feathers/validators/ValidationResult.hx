@@ -29,7 +29,7 @@ package feathers.validators;
 	This lets you access the ValidationResult objects
 	from within an event listener.
 
-	@see `mx.events.ValidationResultEvent`
+	@see `feathers.events.ValidationResultEvent`
 **/
 class ValidationResult {
 	//--------------------------------------------------------------------------

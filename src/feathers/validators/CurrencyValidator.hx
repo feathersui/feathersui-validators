@@ -30,7 +30,7 @@ package feathers.validators;
 	`thousandsSeparator`, and `decimalSeparator`
 	properties for internationalization.
 
-	@see `mx.validators.CurrencyValidatorAlignSymbol`
+	@see `feathers.validators.CurrencyValidatorAlignSymbol`
 **/
 class CurrencyValidator extends Validator {
 	//--------------------------------------------------------------------------
@@ -75,7 +75,7 @@ class CurrencyValidator extends Validator {
 		@return An Array of ValidationResult objects, with one ValidationResult 
 		object for each field examined by the validator. 
 
-		@see `mx.validators.ValidationResult`
+		@see `feathers.validators.ValidationResult`
 	**/
 	public static function validateCurrency(validator:CurrencyValidator, value:Dynamic, baseField:String):Array<ValidationResult> {
 		var results:Array<ValidationResult> = [];
@@ -347,7 +347,7 @@ class CurrencyValidator extends Validator {
 		 
 		@default CurrencyValidatorAlignSymbol.LEFT
 
-		@see `mx.validators.CurrencyValidatorAlignSymbol`
+		@see `feathers.validators.CurrencyValidatorAlignSymbol`
 	**/
 	public var alignSymbol(get, set):String;
 

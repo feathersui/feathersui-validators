@@ -67,7 +67,7 @@ import openfl.errors.Error;
 	- American Express: 34 or 37
 	- Diners Club: 300 to 305, 36 or 38, 51 to 55
 
-	@see `mx.validators.CreditCardValidatorCardType`
+	@see `feathers.validators.CreditCardValidatorCardType`
 **/
 class CreditCardValidator extends Validator {
 	private static final MISSING_CARD_TYPE_ERROR = "The value being validated doesn't contain a cardType property.";
@@ -105,7 +105,7 @@ class CreditCardValidator extends Validator {
 		@return An Array of ValidationResult objects, with one ValidationResult 
 		object for each field examined by the validator. 
 
-		@see `mx.validators.ValidationResult`
+		@see `feathers.validators.ValidationResult`
 	**/
 	public static function validateCreditCard(validator:CreditCardValidator, value:Dynamic, baseField:String):Array<ValidationResult> {
 		var results:Array<ValidationResult> = [];
@@ -526,7 +526,7 @@ class CreditCardValidator extends Validator {
 		either `cardTypeProperty` or `cardTypeValueFunction` as well.
 
 		@see `cardTypeValueFunction`
-		@see `mx.validators.CreditCardValidatorCardType`
+		@see `feathers.validators.CreditCardValidatorCardType`
 	**/
 	public var cardTypeProperty:String;
 
@@ -555,7 +555,7 @@ class CreditCardValidator extends Validator {
 
 		@see `cardTypeProperty`
 		@see `cardTypeValueFunction`
-		@see `mx.validators.CreditCardValidatorCardType`
+		@see `feathers.validators.CreditCardValidatorCardType`
 	**/
 	public var cardTypeSource(get, set):Dynamic;
 

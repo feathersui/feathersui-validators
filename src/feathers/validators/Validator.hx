@@ -30,9 +30,9 @@ import openfl.events.IEventDispatcher;
 	required, which means that the user must enter a value in the field
 	or the validation fails.
 	*
-	@see `mx.events.ValidationResultEvent`
-	@see `mx.validators.ValidationResult`
-	@see `mx.validators.RegExpValidationResult`
+	@see `feathers.events.ValidationResultEvent`
+	@see `feathers.validators.ValidationResult`
+	@see `feathers.validators.RegExpValidationResult`
  */
 class Validator extends EventDispatcher implements IValidator {
 	//--------------------------------------------------------------------------
@@ -623,8 +623,8 @@ class Validator extends EventDispatcher implements IValidator {
 		Examine the `ValidationResult.isError`
 		property to determine if the field passed or failed the validation. 
 
-		@see `mx.events.ValidationResultEvent`
-		@see `mx.validators.ValidationResult`
+		@see `feathers.events.ValidationResultEvent`
+		@see `feathers.validators.ValidationResult`
 	**/
 	public function validate(value:Dynamic = null, suppressEvents:Bool = false):ValidationResultEvent {
 		if (value == null) {
@@ -711,7 +711,7 @@ class Validator extends EventDispatcher implements IValidator {
 		with one ValidationResult object for each field examined
 		by the validator that failed validation.
 
-		@see `mx.validators.ValidationResult`
+		@see `feathers.validators.ValidationResult`
 	**/
 	private function doValidation(value:Dynamic):Array<ValidationResult> {
 		var results:Array<ValidationResult> = [];
