@@ -424,12 +424,22 @@ class CreditCardValidator extends Validator {
 	// [Inspectable(category="General")]
 
 	/**
-		Name of the card number property to validate. 
-		This attribute is optional, but if you specify
-		the `cardNumberSource` property, 
-		you should also set this property.
+		Name of the card number property to validate. This attribute is
+		optional, but if you specify the `cardNumberSource` property, 
+		you should also specify either `cardNumberProperty` or
+		`cardNumberValueFunction` as well.
+
+		@see `cardNumberValueFunction`
 	**/
 	public var cardNumberProperty:String;
+
+	/**
+		A function that returns the day value to validate. It's recommended to
+		use `cardNumberValueFunction` instead of `cardNumberProperty` because
+		reflection is used with `cardNumberProperty`, which could result in
+		issues if Dead Code Elimination (DCE) is enabled.
+	**/
+	public var cardNumberValueFunction:() -> Dynamic;
 
 	//----------------------------------
 	//  cardNumberSource
@@ -441,9 +451,13 @@ class CreditCardValidator extends Validator {
 	/** 
 		Object that contains the value of the card number field.
 		If you specify a value for this property, you must also specify
-		a value for the `cardNumberProperty` property. 
+		a value for either the `cardNumberProperty` property or the
+		`cardNumberValueFunction` property. 
 		Do not use this property if you set the `source` 
-		and `property` properties.
+		and `property` (or `valueFunction`) properties.
+
+		@see `cardNumberProperty`
+		@see `cardNumberValueFunction`
 	**/
 	public var cardNumberSource(get, set):Dynamic;
 
@@ -507,22 +521,22 @@ class CreditCardValidator extends Validator {
 	// [Inspectable(category="General")]
 
 	/**
-		Name of the card type property to validate. 
-		This attribute is optional, but if you specify the
-		`cardTypeSource` property,
-		you should also set this property.
+		Name of the card type property to validate. This property is optional,
+		but if you specify the `cardTypeSource` property, you should specify
+		either `cardTypeProperty` or `cardTypeValueFunction` as well.
 
-		In Haxe, you can use the following constants to set this property:
-
-		- `CreditCardValidatorCardType.AMERICAN_EXPRESS`,
-		- `CreditCardValidatorCardType.DINERS_CLUB`
-		- `CreditCardValidatorCardType.DISCOVER`
-		- `CreditCardValidatorCardType.MASTER_CARD`
-		- `CreditCardValidatorCardType.VISA`
-
+		@see `cardTypeValueFunction`
 		@see `mx.validators.CreditCardValidatorCardType`
 	**/
 	public var cardTypeProperty:String;
+
+	/**
+		A function that returns the day value to validate. It's recommended to
+		use `cardTypeValueFunction` instead of `cardTypeProperty` because
+		reflection is used with `cardTypeProperty`, which could result in issues
+		if Dead Code Elimination (DCE) is enabled.
+	**/
+	public var cardTypeValueFunction:() -> Dynamic;
 
 	//----------------------------------
 	//  cardTypeSource
@@ -534,9 +548,14 @@ class CreditCardValidator extends Validator {
 	/** 
 		Object that contains the value of the card type field.
 		If you specify a value for this property, you must also specify
-		a value for the `cardTypeProperty` property. 
+		a value for either the `cardTypeProperty` property or the
+		`cardTypeValueFunction` property. 
 		Do not use this property if you set the `source` 
-		and `property` properties.
+		and `property` (or `valueFunction`) properties.
+
+		@see `cardTypeProperty`
+		@see `cardTypeValueFunction`
+		@see `mx.validators.CreditCardValidatorCardType`
 	**/
 	public var cardTypeSource(get, set):Dynamic;
 
@@ -790,12 +809,18 @@ class CreditCardValidator extends Validator {
 
 		var value:Dynamic = {};
 
-		if (cardTypeSource != null && cardTypeProperty != null) {
+		if (cardTypeValueFunction != null) {
+			value.cardType = cardTypeValueFunction();
+			useValue = true;
+		} else if (cardTypeSource != null && cardTypeProperty != null) {
 			value.cardType = Reflect.getProperty(cardTypeSource, cardTypeProperty);
 			useValue = true;
 		}
 
-		if (cardNumberSource != null && cardNumberProperty != null) {
+		if (cardNumberValueFunction != null) {
+			value.cardNumber = cardNumberValueFunction();
+			useValue = true;
+		} else if (cardNumberSource != null && cardNumberProperty != null) {
 			value.cardNumber = Reflect.getProperty(cardNumberSource, cardNumberProperty);
 			useValue = true;
 		}

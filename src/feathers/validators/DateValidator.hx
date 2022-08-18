@@ -540,11 +540,21 @@ class DateValidator extends Validator {
 	// [Inspectable(category="General")]
 
 	/**
-		Name of the day property to validate. 
-		This property is optional, but if you specify the
-		`daySource` property, you should also set this property.
+		Name of the day property to validate. This property is optional, but
+		if you specify the `daySource` property, you should specify either
+		`dayProperty` or `dayValueFunction` as well.
+
+		@see `dayValueFunction`
 	 */
 	public var dayProperty:String;
+
+	/**
+		A function that returns the day value to validate. It's recommended to
+		use `dayValueFunction` instead of `dayProperty` because reflection is
+		used with `dayProperty`, which could result in issues if Dead Code
+		Elimination (DCE) is enabled.
+	**/
+	public var dayValueFunction:() -> Dynamic;
 
 	//----------------------------------
 	//  daySource
@@ -556,9 +566,13 @@ class DateValidator extends Validator {
 	/** 
 		Object that contains the value of the day field.
 		If you specify a value for this property, you must also
-		specify a value for the `dayProperty` property. 
+		specify a value for either the `dayProperty` property or the
+		`dayValueFunction` property. 
 		Do not use this property if you set the `source` 
-		and `property` properties.
+		and `property` (or `valueFunction`) properties.
+
+		@see `dayProperty`
+		@see `dayValueFunction`
 	**/
 	public var daySource(get, set):Dynamic;
 
@@ -674,11 +688,21 @@ class DateValidator extends Validator {
 	// [Inspectable(category="General")]
 
 	/**
-		Name of the month property to validate. 
-		This property is optional, but if you specify the
-		`monthSource` property, you should also set this property.
+		Name of the month property to validate. This property is optional, but
+		if you specify the `monthSource` property, you should specify either
+		`monthProperty` or `monthValueFunction` as well.
+
+		@see `monthValueFunction`
 	**/
 	public var monthProperty:String;
+
+	/**
+		A function that returns the day value to validate. It's recommended to
+		use `monthValueFunction` instead of `monthProperty` because reflection
+		is used with `monthProperty`, which could result in issues if Dead Code
+		Elimination (DCE) is enabled.
+	**/
+	public var monthValueFunction:() -> Dynamic;
 
 	//----------------------------------
 	//  monthSource
@@ -690,9 +714,13 @@ class DateValidator extends Validator {
 	/** 
 		Object that contains the value of the month field.
 		If you specify a value for this property, you must also specify
-		a value for the `monthProperty` property. 
+		a value for either the `monthProperty` property or the
+		`monthValueFunction` property.
 		Do not use this property if you set the `source` 
-		and `property` properties. 
+		and `property` (or `valueFunction`) properties. 
+
+		@see `monthProperty`
+		@see `monthValueFunction`
 	**/
 	public var monthSource(get, set):Dynamic;
 
@@ -786,11 +814,21 @@ class DateValidator extends Validator {
 	// [Inspectable(category="General")]
 
 	/**
-		Name of the year property to validate. 
-		This property is optional, but if you specify the
-		`yearSource` property, you should also set this property.
+		Name of the year property to validate. This property is optional, but if
+		you specify the `yearSource` property, you should specify either
+		`yearProperty` or `yearValueFunction` as well.
+
+		@see `yearValueFunction`
 	**/
 	public var yearProperty:String;
+
+	/**
+		A function that returns the day value to validate. It's recommended to
+		use `yearValueFunction` instead of `yearProperty` because reflection
+		is used with `yearProperty`, which could result in issues if Dead Code
+		Elimination (DCE) is enabled.
+	**/
+	public var yearValueFunction:() -> Dynamic;
 
 	//----------------------------------
 	//  yearSource
@@ -802,9 +840,13 @@ class DateValidator extends Validator {
 	/** 
 		Object that contains the value of the year field.
 		If you specify a value for this property, you must also specify
-		a value for the `yearProperty` property. 
+		a value for either the `yearProperty` property or the
+		`yearValueFunction` property. 
 		Do not use this property if you set the `source` 
-		and `property` properties. 
+		and `property` (or `valueFunction`) properties. 
+
+		@see `yearProperty`
+		@see `yearValueFunction`
 	**/
 	public var yearSource(get, set):Dynamic;
 
@@ -1053,17 +1095,26 @@ class DateValidator extends Validator {
 
 		var value:Dynamic = {};
 
-		if (daySource != null && dayProperty != null) {
+		if (dayValueFunction != null) {
+			value.day = dayValueFunction();
+			useValue = true;
+		} else if (daySource != null && dayProperty != null) {
 			value.day = Reflect.getProperty(daySource, dayProperty);
 			useValue = true;
 		}
 
-		if (monthSource != null && monthProperty != null) {
+		if (monthValueFunction != null) {
+			value.month = monthValueFunction();
+			useValue = true;
+		} else if (monthSource != null && monthProperty != null) {
 			value.month = Reflect.getProperty(monthSource, monthProperty);
 			useValue = true;
 		}
 
-		if (yearSource != null && yearProperty != null) {
+		if (yearValueFunction != null) {
+			value.year = yearValueFunction();
+			useValue = true;
+		} else if (yearSource != null && yearProperty != null) {
 			value.year = Reflect.getProperty(yearSource, yearProperty);
 			useValue = true;
 		}
