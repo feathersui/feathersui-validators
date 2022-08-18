@@ -4,7 +4,7 @@ A port of the form validation classes from [Apache Flex](https://flex.apache.org
 
 Includes the following validators:
 
-- [`CreditCardValidator`](https://api.feathersui.com/validators/current/feathers/validators/CreditCardValidator.htmlc)
+- [`CreditCardValidator`](https://api.feathersui.com/validators/current/feathers/validators/CreditCardValidator.html)
 - [`CurrencyValidator`](https://api.feathersui.com/validators/current/feathers/validators/CurrencyValidator.html)
 - [`DateValidator`](https://api.feathersui.com/validators/current/feathers/validators/DateValidator.html)
 - [`EmailValidator`](https://api.feathersui.com/validators/current/feathers/validators/EmailValidator.html)
