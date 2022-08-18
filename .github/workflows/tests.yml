@@ -26,7 +26,6 @@ jobs:
         run: |
           haxelib install lime --quiet
           haxelib install openfl --quiet
-          haxelib install feathersui --quiet
           haxelib install utest --quiet
           haxelib dev feathersui-validators $GITHUB_WORKSPACE
       - name: Set up Node.js dependencies
@@ -52,7 +51,6 @@ jobs:
         run: |
           haxelib install lime --quiet
           haxelib install openfl --quiet
-          haxelib install feathersui --quiet
           haxelib install utest --quiet
           haxelib dev feathersui-validators $GITHUB_WORKSPACE
       - name: Run Tests
@@ -72,7 +70,6 @@ jobs:
         run: |
           haxelib install lime --quiet
           haxelib install openfl --quiet
-          haxelib install feathersui --quiet
           haxelib install utest --quiet
           haxelib dev feathersui-validators $GITHUB_WORKSPACE
       - name: Run Tests
@@ -93,7 +90,6 @@ jobs:
         run: |
           haxelib install lime --quiet
           haxelib install openfl --quiet
-          haxelib install feathersui --quiet
           haxelib install utest --quiet
           haxelib dev feathersui-validators ${{ github.workspace }} 
           haxelib run lime config AIR_SDK ${{ env.AIR_HOME }}
