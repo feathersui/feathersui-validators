@@ -262,10 +262,18 @@ class Validator extends EventDispatcher implements IValidator {
 
 	/**
 		A String specifying the name of the property of the `source` object that
-		contains the value to validate. The property is optional, but if you specify
-		`source`, you should set a value for this property as well.
+		contains the value to validate. Setting `property` is optional, but if
+		you specify `source`, you should set a value for either `property` or
+		`valueFunction` as well.
+
+		Reading the `property` uses reflection, which may not work if Dead Code
+		Elimination (DCE) is enabled. The `property` property is included for
+		backwards compatibility with the Flex API, but the new `valueFunction`
+		is now recommended instead.
 
 		@default null
+
+		@see `valueFunction`
 	**/
 	public var property(get, set):String;
 
@@ -276,6 +284,27 @@ class Validator extends EventDispatcher implements IValidator {
 	private function set_property(value:String):String {
 		_property = value;
 		return _property;
+	}
+
+	private var _valueFunction:() -> Dynamic;
+
+	/**
+		A function that returns the value to validate. It's recommended to use
+		`valueFunction` instead of `property` because reflection is used with
+		`property`, which could result in issues if Dead Code Elimination (DCE)
+		is enabled.
+
+		@default null
+	**/
+	public var valueFunction(get, set):() -> Dynamic;
+
+	private function get_valueFunction():() -> Dynamic {
+		return _valueFunction;
+	}
+
+	private function set_valueFunction(value:() -> Dynamic):() -> Dynamic {
+		_valueFunction = value;
+		return _valueFunction;
 	}
 
 	//----------------------------------
@@ -323,6 +352,8 @@ class Validator extends EventDispatcher implements IValidator {
 		The `source` property is optional.
 
 		@default null
+
+		@see `valueFunction`
 	**/
 	public var source(get, set):Dynamic;
 
@@ -614,15 +645,15 @@ class Validator extends EventDispatcher implements IValidator {
 		@return The Object to validate.
 	**/
 	private function getValueFromSource():Dynamic {
-		var message:String;
-
-		if (_source != null && (_property != null && _property.length > 0)) {
+		if (_valueFunction != null) {
+			return _valueFunction();
+		} else if (_source != null && (_property != null && _property.length > 0)) {
 			return _property.indexOf(".") == -1 ? Reflect.getProperty(_source, _property) : getValue(_source, _property.split("."));
 		} else if (_source == null && (_property != null && _property.length > 0)) {
-			message = "The source attribute must be specified when the property attribute is specified.";
+			var message = "The source attribute must be specified when the property attribute is specified.";
 			throw new Error(message);
 		} else if (_source != null && (_property == null || _property.length == 0)) {
-			message = "The property attribute must be specified when the source attribute is specified.";
+			var message = "The property or propertyFunction attribute must be specified when the source attribute is specified.";
 			throw new Error(message);
 		}
 
