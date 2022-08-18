@@ -17,11 +17,12 @@
 
 package feathers.validators;
 
-import openfl.errors.Error;
 import feathers.events.ValidationResultEvent;
-import openfl.events.IEventDispatcher;
+import openfl.errors.Error;
 import openfl.events.Event;
 import openfl.events.EventDispatcher;
+import openfl.events.FocusEvent;
+import openfl.events.IEventDispatcher;
 
 /**
 	The Validator class is the base class for all Flex validators. 
@@ -439,7 +440,7 @@ class Validator extends EventDispatcher implements IValidator {
 	//----------------------------------
 	//  triggerEvent
 	//----------------------------------
-	private var _triggerEvent:String = Event.CHANGE;
+	private var _triggerEvent:String = FocusEvent.FOCUS_OUT;
 
 	// [Inspectable(category="General")]
 
