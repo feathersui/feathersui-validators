@@ -7,8 +7,7 @@
   "version": "1.0.0-alpha.1",
   "classPath": "src",
   "dependencies": {
-    "openfl": "",
-    "feathersui": ""
+    "openfl": ""
   },
   "contributors": ["bowlerhat"],
   "releasenote": "Initial release"

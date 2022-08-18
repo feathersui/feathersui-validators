@@ -19,7 +19,6 @@ Includes the following validators:
 
 - Haxe 4.2
 - OpenFL 9.2
-- Feathers UI 1.0
 
 ## Installation
 
