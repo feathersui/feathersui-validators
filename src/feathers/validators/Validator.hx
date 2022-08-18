@@ -114,7 +114,10 @@ class Validator extends EventDispatcher implements IValidator {
 		var result:Dynamic = obj;
 		var i:Int = -1;
 		while (++i < path.length && result != null) {
-			result = Reflect.hasField(result, path[i]) ? Reflect.field(result, path[i]) : null;
+			result = Reflect.getProperty(result, path[i]);
+			if (result == null) {
+				return null;
+			}
 		}
 
 		return result;
