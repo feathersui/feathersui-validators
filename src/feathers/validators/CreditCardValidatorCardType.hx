@@ -25,7 +25,7 @@ package feathers.validators;
 
 	@see `feathers.validators.CreditCardValidator`
 **/
-final class CreditCardValidatorCardType {
+@:enum abstract CreditCardValidatorCardType(String) from String to String {
 	//--------------------------------------------------------------------------
 	//
 	//  Class constants
@@ -35,25 +35,25 @@ final class CreditCardValidatorCardType {
 	/**
 		Specifies the card type as MasterCard.
 	**/
-	public static final MASTER_CARD:String = "MasterCard";
+	public var MASTER_CARD = "MasterCard";
 
 	/**
 		Specifies the card type as Visa.
 	**/
-	public static final VISA:String = "Visa";
+	public var VISA = "Visa";
 
 	/**
 		Specifies the card type as American Express.
 	**/
-	public static final AMERICAN_EXPRESS:String = "American Express";
+	public var AMERICAN_EXPRESS = "American Express";
 
 	/**
 		Specifies the card type as Discover.
 	**/
-	public static final DISCOVER:String = "Discover";
+	public var DISCOVER = "Discover";
 
 	/**
 		Specifies the card type as Diners Club.
 	**/
-	public static final DINERS_CLUB:String = "Diners Club";
+	public var DINERS_CLUB = "Diners Club";
 }

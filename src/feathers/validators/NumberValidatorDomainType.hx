@@ -23,7 +23,7 @@ package feathers.validators;
 
 	@see `feathers.validators.NumberValidator`
 **/
-final class NumberValidatorDomainType {
+@:enum abstract NumberValidatorDomainType(String) from String to String {
 	//--------------------------------------------------------------------------
 	//
 	//  Class constants
@@ -33,10 +33,10 @@ final class NumberValidatorDomainType {
 	/**
 	 *  Specifies to validate an integer number.
 	**/
-	public static final INT:String = "int";
+	public var INT = "int";
 
 	/**
 		Specifies to validate a real number.
 	**/
-	public static final REAL:String = "real";
+	public var REAL = "real";
 }

@@ -24,7 +24,7 @@ package feathers.validators;
 
 	@see `feathers.validators.ZipCodeValidator`
 **/
-final class ZipCodeValidatorDomainType {
+@:enum abstract ZipCodeValidatorDomainType(String) from String to String {
 	//--------------------------------------------------------------------------
 	//
 	//  Class constants
@@ -34,15 +34,15 @@ final class ZipCodeValidatorDomainType {
 	/**
 		Specifies to validate a United States or Canadian ZIP code.
 	**/
-	public static final US_OR_CANADA:String = "US or Canada";
+	public var US_OR_CANADA = "US or Canada";
 
 	/**
 		Specifies to validate a United States ZIP code.
 	**/
-	public static final US_ONLY:String = "US Only";
+	public var US_ONLY = "US Only";
 
 	/**
 		Specifies to validate a Canadian ZIP code.
 	**/
-	public static final CANADA_ONLY:String = "Canada Only";
+	public var CANADA_ONLY = "Canada Only";
 }

@@ -25,7 +25,7 @@ package feathers.validators;
 
 	@see `feathers.validators.CurrencyValidator`
 **/
-final class CurrencyValidatorAlignSymbol {
+@:enum abstract CurrencyValidatorAlignSymbol(String) from String to String {
 	//--------------------------------------------------------------------------
 	//
 	//  Class constants
@@ -36,17 +36,17 @@ final class CurrencyValidatorAlignSymbol {
 		Specifies `"any"` as the alignment of the currency symbol
 		for the CurrencyValidator class.
 	**/
-	public static final ANY:String = "any";
+	public var ANY = "any";
 
 	/**
 		Specifies `"left"` as the alignment of the currency symbol
 		for the CurrencyValidator class.
 	**/
-	public static final LEFT:String = "left";
+	public var LEFT = "left";
 
 	/**
 		Specifies `"right"` as the alignment of the currency symbol
 		for the CurrencyValidator class.
 	**/
-	public static final RIGHT:String = "right";
+	public var RIGHT = "right";
 }
