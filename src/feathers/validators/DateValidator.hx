@@ -858,7 +858,7 @@ class DateValidator extends Validator {
 		if (_yearSource == value)
 			return _yearSource;
 
-		if (value is String) {
+		if ((value is String)) {
 			var message:String = ValidatorStringUtil.substitute(YS_ATTRIBUTE_ERROR, value);
 			throw new Error(message);
 		}

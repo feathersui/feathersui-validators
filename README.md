@@ -17,7 +17,7 @@ Includes the following validators:
 
 ## Minimum Requirements
 
-- Haxe 4.2
+- Haxe 4.1
 - OpenFL 9.2
 
 ## Installation
