@@ -12,7 +12,7 @@ jobs:
   test-html5:
     strategy:
       matrix:
-        haxe-version: [4.2.5]
+        haxe-version: [4.0.5]
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,8 +24,8 @@ jobs:
           node-version: "16"
       - name: Set up Haxelib dependencies
         run: |
-          haxelib install lime --quiet
-          haxelib install openfl --quiet
+          haxelib install lime 7.8.0 --quiet
+          haxelib install openfl 8.9.7 --quiet
           haxelib install utest --quiet
           haxelib dev feathersui-validators $GITHUB_WORKSPACE
       - name: Set up Node.js dependencies
@@ -40,7 +40,7 @@ jobs:
   test-neko:
     strategy:
       matrix:
-        haxe-version: [4.2.5]
+        haxe-version: [4.0.5]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -49,8 +49,8 @@ jobs:
           haxe-version: ${{ matrix.haxe-version }}
       - name: Set up Haxelib dependencies
         run: |
-          haxelib install lime --quiet
-          haxelib install openfl --quiet
+          haxelib install lime 7.8.0 --quiet
+          haxelib install openfl 8.9.7 --quiet
           haxelib install utest --quiet
           haxelib dev feathersui-validators $GITHUB_WORKSPACE
       - name: Run Tests
@@ -59,7 +59,7 @@ jobs:
   test-hashlink:
     strategy:
       matrix:
-        haxe-version: [4.2.5]
+        haxe-version: [4.0.5]
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
@@ -68,8 +68,8 @@ jobs:
           haxe-version: ${{ matrix.haxe-version }}
       - name: Set up Haxelib dependencies
         run: |
-          haxelib install lime --quiet
-          haxelib install openfl --quiet
+          haxelib install lime 7.8.0 --quiet
+          haxelib install openfl 8.9.7 --quiet
           haxelib install utest --quiet
           haxelib dev feathersui-validators $GITHUB_WORKSPACE
       - name: Run Tests
@@ -78,7 +78,7 @@ jobs:
   test-air:
     strategy:
       matrix:
-        haxe-version: [4.2.5]
+        haxe-version: [4.0.5]
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
@@ -88,8 +88,8 @@ jobs:
           haxe-version: ${{ matrix.haxe-version }}
       - name: Set up Haxelib dependencies
         run: |
-          haxelib install lime --quiet
-          haxelib install openfl --quiet
+          haxelib install lime 7.8.0 --quiet
+          haxelib install openfl 8.9.7 --quiet
           haxelib install utest --quiet
           haxelib dev feathersui-validators ${{ github.workspace }} 
           haxelib run lime config AIR_SDK ${{ env.AIR_HOME }}

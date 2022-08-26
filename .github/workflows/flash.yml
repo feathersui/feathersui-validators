@@ -16,11 +16,11 @@ jobs:
       - uses: actions/checkout@v2
       - uses: krdlab/setup-haxe@v1
         with:
-          haxe-version: 4.2.5
+          haxe-version: 4.0.5
       - name: Set up Haxelib dependencies
         run: |
-          haxelib install lime --quiet
-          haxelib install openfl --quiet
+          haxelib install lime 7.8.0 --quiet
+          haxelib install openfl 8.9.7 --quiet
           haxelib dev feathersui-validators $GITHUB_WORKSPACE
       - name: Build Flash .swc library
         run: haxelib run openfl build flash -debug
