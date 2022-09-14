@@ -4,7 +4,7 @@
   "license": "Apache",
   "tags": ["openfl", "feathersui", "validators", "validation", "forms"],
   "description": "Form validation for Feathers UI",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0",
   "classPath": "src",
   "dependencies": {
     "openfl": ""

@@ -22,10 +22,10 @@ Includes the following validators:
 
 ## Installation
 
-This library is not yet available on Haxelib, so you'll need to install it from Github.
+Run the following command in a terminal to install [feathersui-validators](https://lib.haxe.org/p/feathersui-validators) from Haxelib.
 
 ```sh
-haxelib git feathersui-validators https://github.com/feathersui/feathersui-validators.git
+haxelib install feathersui-validators
 ```
 
 ## Project Configuration
