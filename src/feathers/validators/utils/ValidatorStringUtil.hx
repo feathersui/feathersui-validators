@@ -70,29 +70,28 @@ class ValidatorStringUtil {
 			return '';
 		}
 		#if (haxe_ver < 4.2)
-		var rest:Array<String> = [];
+		var args:Array<String> = [];
 		if (value1 != null) {
-			rest.push(value1);
+			args.push(value1);
 			if (value2 != null) {
-				rest.push(value2);
+				args.push(value2);
 				if (value3 != null) {
-					rest.push(value3);
+					args.push(value3);
 				}
 			}
 		}
-		#end
+		#else
 		// Replace all of the parameters in the msg string.
-		var len:UInt = rest.length;
 		var args:Array<String> = null;
 		var restAsArray = rest.toArray();
-		if (len == 1 && (restAsArray[0] is Array)) {
+		if (restAsArray.length == 1 && (restAsArray[0] is Array)) {
 			var rest0:Array<Dynamic> = cast restAsArray[0];
 			args = rest0.map(current -> Std.string(current));
-			len = args.length;
 		} else {
 			args = restAsArray.map(current -> Std.string(current));
 		}
-		for (i in 0...len) {
+		#end
+		for (i in 0...args.length) {
 			str = new EReg("\\{" + i + "\\}", "g").replace(str, args[i]);
 		}
 		return str;
