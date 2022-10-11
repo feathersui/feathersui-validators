@@ -65,7 +65,7 @@ class ValidatorStringUtil {
 		@return New string with all of the `{n}` tokens
 		replaced with the respective arguments specified.
 	**/
-	public static function substitute(str:String, #if (haxe_ver >= 4.2)...rest #else ?value1:String, ?value2:String, ?value3:String #end):String {
+	public static function substitute(str:String, #if (haxe_ver >= 4.2)...rest:Dynamic #else ?value1:String, ?value2:String, ?value3:String #end):String {
 		if (str == null) {
 			return '';
 		}
@@ -83,12 +83,14 @@ class ValidatorStringUtil {
 		#end
 		// Replace all of the parameters in the msg string.
 		var len:UInt = rest.length;
-		var args:Array<String>;
-		if (len == 1 && (rest[0] is Array)) {
-			args = cast rest[0];
+		var args:Array<String> = null;
+		var restAsArray = rest.toArray();
+		if (len == 1 && (restAsArray[0] is Array)) {
+			var rest0:Array<Dynamic> = cast restAsArray[0];
+			args = rest0.map(current -> Std.string(current));
 			len = args.length;
 		} else {
-			args = rest;
+			args = restAsArray.map(current -> Std.string(current));
 		}
 		for (i in 0...len) {
 			str = new EReg("\\{" + i + "\\}", "g").replace(str, args[i]);

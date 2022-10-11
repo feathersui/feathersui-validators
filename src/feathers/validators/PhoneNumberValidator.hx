@@ -48,7 +48,7 @@ class PhoneNumberValidator extends Validator {
 		var allowedFormatChars:String = validator.allowedFormatChars;
 
 		var valid:String = Validator.DECIMAL_DIGITS + allowedFormatChars;
-		var len:Int = value.toString().length;
+		var len:Int = Std.string(value).length;
 		var digitLen:Int = 0;
 		var n:Int;
 		var minDigits = validator.minDigits;
@@ -61,7 +61,7 @@ class PhoneNumberValidator extends Validator {
 		}
 
 		for (i in 0...len) {
-			var temp:String = "" + value.toString().substring(i, i + 1);
+			var temp:String = "" + Std.string(value).substring(i, i + 1);
 			if (valid.indexOf(temp) == -1) {
 				results.push(new ValidationResult(true, baseField, "invalidChar", validator.invalidCharError));
 				return results;

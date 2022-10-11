@@ -182,7 +182,7 @@ class CreditCardValidator extends Validator {
 		if (results.length > 0)
 			return results;
 
-		var cardNumLen:Int = digitsOnlyCardNum.toString().length;
+		var cardNumLen:Int = digitsOnlyCardNum.length;
 		var correctLen:Int = -1;
 		var correctLen2:Int = -1;
 		var correctPrefixArray:Array<String> = [];

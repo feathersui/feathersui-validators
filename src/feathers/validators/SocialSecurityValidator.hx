@@ -61,7 +61,7 @@ class SocialSecurityValidator extends Validator {
 		var allowedFormatChars:String = validator.allowedFormatChars;
 
 		var hyphencount:Int = 0;
-		var len:Int = value.toString().length;
+		var len:Int = Std.string(value).length;
 		var checkForFormatChars:Bool = false;
 
 		var n:Int;
