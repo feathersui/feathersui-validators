@@ -4,11 +4,11 @@
   "license": "Apache",
   "tags": ["openfl", "feathersui", "validators", "validation", "forms"],
   "description": "Form validation for Feathers UI",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "classPath": "src",
   "dependencies": {
     "openfl": ""
   },
   "contributors": ["bowlerhat"],
-  "releasenote": "Initial release"
+  "releasenote": "hxcpp fixes"
 }
