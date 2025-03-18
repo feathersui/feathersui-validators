@@ -23,7 +23,7 @@ package feathers.validators;
 
 	@see `feathers.validators.NumberValidator`
 **/
-@:enum abstract NumberValidatorDomainType(String) from String to String {
+#if haxe4 enum #else @:enum #end abstract NumberValidatorDomainType(String) from String to String {
 	//--------------------------------------------------------------------------
 	//
 	//  Class constants

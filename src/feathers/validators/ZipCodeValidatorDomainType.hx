@@ -24,7 +24,7 @@ package feathers.validators;
 
 	@see `feathers.validators.ZipCodeValidator`
 **/
-@:enum abstract ZipCodeValidatorDomainType(String) from String to String {
+#if haxe4 enum #else @:enum #end abstract ZipCodeValidatorDomainType(String) from String to String {
 	//--------------------------------------------------------------------------
 	//
 	//  Class constants

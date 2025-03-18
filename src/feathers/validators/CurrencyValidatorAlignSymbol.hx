@@ -25,7 +25,7 @@ package feathers.validators;
 
 	@see `feathers.validators.CurrencyValidator`
 **/
-@:enum abstract CurrencyValidatorAlignSymbol(String) from String to String {
+#if haxe4 enum #else @:enum #end abstract CurrencyValidatorAlignSymbol(String) from String to String {
 	//--------------------------------------------------------------------------
 	//
 	//  Class constants
