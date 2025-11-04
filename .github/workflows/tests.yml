@@ -13,8 +13,8 @@ jobs:
         haxe-version: [4.0.5, 4.1.5]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: krdlab/setup-haxe@v1
+      - uses: actions/checkout@v5
+      - uses: krdlab/setup-haxe@8f35d1215b93e940a76f9470e22e8a5ba6149598
         with:
           haxe-version: ${{ matrix.haxe-version }}
       - name: Set up Haxelib dependencies
@@ -32,11 +32,11 @@ jobs:
         haxe-version: [4.0.5, 4.1.5, 4.2.5, 4.3.2]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: krdlab/setup-haxe@v1
+      - uses: actions/checkout@v5
+      - uses: krdlab/setup-haxe@8f35d1215b93e940a76f9470e22e8a5ba6149598
         with:
           haxe-version: ${{ matrix.haxe-version }}
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: "16"
       - name: Set up Haxelib dependencies
@@ -62,8 +62,8 @@ jobs:
         haxe-version: [4.0.5, 4.1.5, 4.2.5, 4.3.2]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: krdlab/setup-haxe@v1
+      - uses: actions/checkout@v5
+      - uses: krdlab/setup-haxe@8f35d1215b93e940a76f9470e22e8a5ba6149598
         with:
           haxe-version: ${{ matrix.haxe-version }}
       - name: Set up Haxelib dependencies
@@ -80,11 +80,10 @@ jobs:
       matrix:
         haxe-version: [4.0.5, 4.1.5, 4.2.5, 4.3.2]
     # AL init fails on both windows and ubuntu
-    #macos-14 is arm64, which setup-haxe doesn't support yet
-    runs-on: macos-13
+    runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: krdlab/setup-haxe@v1
+      - uses: actions/checkout@v5
+      - uses: krdlab/setup-haxe@8f35d1215b93e940a76f9470e22e8a5ba6149598
         with:
           haxe-version: ${{ matrix.haxe-version }}
       - name: Set up Haxelib dependencies
@@ -102,12 +101,12 @@ jobs:
         haxe-version: [4.0.5, 4.1.5, 4.2.5, 4.3.2]
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: joshtynjala/setup-adobe-air-action@v2
         with:
           air-version: "33.1"
           accept-license: true
-      - uses: krdlab/setup-haxe@v1
+      - uses: krdlab/setup-haxe@8f35d1215b93e940a76f9470e22e8a5ba6149598
         with:
           haxe-version: ${{ matrix.haxe-version }}
       - name: Set up Haxelib dependencies
